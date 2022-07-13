@@ -52,6 +52,9 @@ while test $# -gt 0; do
 			--logs - creates 100 files with filename, script name and date
 			--logs <numeric argument> - just as above, but you can specify number of files
 			--help - shows available options'
+			--init - initializes repository
+			--error - creates 100 files with error name
+			-error <numeric argument> - just as above, but you can specify number of files'
 			exit 1
 			;;
 	esac
