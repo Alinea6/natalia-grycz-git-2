@@ -25,6 +25,27 @@ while test $# -gt 0; do
 			exit 1
 			fi
 			;;
+		--init)
+			git clone https://github.com/Alinea6/scripts.git
+			exit 1
+			;;
+		--error)
+			if [ "$#" = 1 ]; then
+                        for i in {1..100}
+                        do
+                                filename="error${i}.txt"
+                                touch $filename
+                        done
+                        exit 1
+                        fi
+                        if [ "$#" = 2 ]; then
+                        for ((i = 1; i <= $2; i++ )); do
+                                filename="error${i}.txt"
+                                touch $filename
+                        done
+                        exit 1
+                        fi
+                        ;;
 		--help | -h)
 			echo 'Available flags and argument for this script:
 			--date - show current date
