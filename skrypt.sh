@@ -25,5 +25,13 @@ while test $# -gt 0; do
 			exit 1
 			fi
 			;;
+		--help)
+			echo 'Available flags and argument for this script:
+			--date - show current date
+			--logs - creates 100 files with filename, script name and date
+			--logs <numeric argument> - just as above, but you can specify number of files
+			--help - shows available options'
+			exit 1
+			;;
 	esac
 done
