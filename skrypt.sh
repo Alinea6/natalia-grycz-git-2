@@ -1,12 +1,12 @@
 #!/bin/bash
 while test $# -gt 0; do
 	case "$1" in
-		--date)
+		--date | -d)
 			now=$(date)
 			echo "Current date: $now"
 			exit 1
 			;;
-		--logs)
+		--logs | -l)
 			if [ "$#" = 1 ]; then
 			for i in {1..100}
 			do
@@ -25,7 +25,7 @@ while test $# -gt 0; do
 			exit 1
 			fi
 			;;
-		--help)
+		--help | -h)
 			echo 'Available flags and argument for this script:
 			--date - show current date
 			--logs - creates 100 files with filename, script name and date
