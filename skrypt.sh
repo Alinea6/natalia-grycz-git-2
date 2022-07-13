@@ -29,7 +29,7 @@ while test $# -gt 0; do
 			git clone https://github.com/Alinea6/scripts.git
 			exit 1
 			;;
-		--error)
+		--error | -e)
 			if [ "$#" = 1 ]; then
                         for i in {1..100}
                         do
